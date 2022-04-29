@@ -19,6 +19,8 @@
     flex-grow: 1;
     
     @media (min-width: 992px) {
+      display: grid;
+      grid-template-areas: "a b c d";
       justify-content: center;
     }
 
