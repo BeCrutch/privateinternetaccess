@@ -27,7 +27,6 @@
     &--item {
       display: flex;
       align-items: center;
-      margin-bottom: 7px;
       
       &:nth-child(1) {
         grid-area: a;
@@ -50,6 +49,7 @@
       @media (min-width: 992px) {
         &:not(:last-of-type){
           margin-right: 36px;
+          margin-bottom: 0px;
         }
       }
       
