@@ -10,7 +10,7 @@ const browserSync = require('browser-sync').create()
 gulp.task('serve', function() {
     browserSync.init({
         server: {
-            baseDir: "./docs"
+            baseDir: "./dist"
         }
     });
 });
@@ -20,7 +20,7 @@ gulp.task('pug', function () {
         .pipe(pug({
             pretty: true
         }))
-        .pipe(gulp.dest('docs'))
+        .pipe(gulp.dest('dist'))
         .on('end', browserSync.reload);
 })
 
@@ -28,7 +28,7 @@ gulp.task('sass', function () {
     return gulp.src('./src/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(csso())
-        .pipe(gulp.dest('./docs/css'))
+        .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.reload({
             stream: true
         }))
