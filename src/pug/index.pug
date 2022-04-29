@@ -1,0 +1,166 @@
+//- index.pug
+include ./components/article
+
+doctype html
+html
+    head
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet")
+        link(rel="stylesheet" type='text/css' href="./css/style.css")
+    body
+        div.warning
+            ul.warning__lists
+                li.warning__lists--item.warning-alert
+                    svg(id="icon_red_alert" data-name="icon/red/alert" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24")
+                        g(id="baseline-warning-24px_1_" data-name="baseline-warning-24px (1)")
+                            path(id="Shape" d="M0,0H24V24H0Z" fill="none")
+                            path(id="Shape-2" data-name="Shape" d="M0,19,11,0,22,19Z" transform="translate(1 2)" fill="#ff8d00")
+                    span You are not protected
+                li.warning__lists--item Your IP Address:
+                    span 107.3.176.194
+                li.warning__lists--item Your ISP:
+                    span Comcast Cable
+                li.warning__lists--item
+                    a(href="#") Learn More ›
+            button.btn-close(type="button" aria-label="close")
+                svg(id="icon_dark_close" data-name="icon/dark/close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24")
+                    g(id="baseline-close-24px")
+                        path(id="Shape" d="M14,1.41,12.59,0,7,5.59,1.41,0,0,1.41,5.59,7,0,12.59,1.41,14,7,8.41,12.59,14,14,12.59,8.41,7Z" transform="translate(5 5)" fill="#889099")
+                        path(id="Shape-2" data-name="Shape" d="M0,0H24V24H0Z" fill="none")
+        include ./components/header
+        div.container
+            div.row
+                main.col-12
+                    +article({
+                        big: true,
+                        img: 'img-1.png',
+                        title: "TV Addons: Legal battle against Canadian media giantsdemonstrates severe consequences facing developers accused of copyright infringement",
+                        author: "Danica Sergison",
+                        time: "JUL 08, 2018",
+                        tags: ['Copyright', 'News', 'Open', 'Source', 'Privacy'],
+                    })
+        div.container
+            div.row
+                div.col-12
+                    div.tags
+                        div.tags__container
+                            h3.tags__container--title tags:
+                            ul.tags__list
+                                li.tags__list--item
+                                    a(href="#") bitcoin
+                                li.tags__list--item
+                                    a bittorrent
+                                li.tags__list--item
+                                    a irc
+                                li.tags__list--item
+                                    a news
+                                li.tags__list--item
+                                    a privacy
+                                li.tags__list--item
+                                    a programming
+                                li.tags__list--item
+                                    a security
+                        div.tags__links
+                            a team
+                            a contact
+        div.container
+            div.row(style="align-item: baseline")
+                div.col-12.col-xl-8.entries
+                    .input-search
+                        input(type="text" placeholder="Search blog")
+                    h2.entries__caption Recent posts
+                    +article({
+                        img: 'img-2.jpg',
+                        title: "The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises",
+                        author: "Jayson",
+                        time: "JUL 24, 2018",
+                        tags: ['Guides'],
+                    })
+                    +article({
+                        img: 'img-3.jpg',
+                        title: "How to get cheaper flights using a VPN",
+                        author: "Derek Zimmer",
+                        time: "JUL 25, 2018",
+                        tags: ['Governments', 'Networking', 'Open', 'Source', 'Privacy', 'Security'],
+                    })
+                    +article({
+                        img: 'img-4.jpg',
+                        title: "Net Neutrality was repealed, but the fight is far from over",
+                        author: "Chris Miller",
+                        time: "JUL 22, 2018",
+                        tags: ['Governments', 'Net Neutrality', 'News'],
+                    })
+                    +article({
+                        img: 'img-2.jpg',
+                        title: "The Internet Cannot be Trusted – Beamsplitters, Backdoors, and Broken Promises",
+                        author: "Jayson",
+                        time: "JUL 24, 2018",
+                        tags: ['Guides'],
+                    })
+                    +article({
+                        img: 'img-3.jpg',
+                        title: "How to get cheaper flights using a VPN",
+                        author: "Derek Zimmer",
+                        time: "JUL 25, 2018",
+                        tags: ['Governments', 'Networking', 'Open', 'Source', 'Privacy', 'Security'],
+                    })
+                    +article({
+                        img: 'img-4.jpg',
+                        title: "Net Neutrality was repealed, but the fight is far from over",
+                        author: "Chris Miller",
+                        time: "JUL 22, 2018",
+                        tags: ['Governments', 'Net Neutrality', 'News'],
+                    })
+                    div.entries__older
+                        button.btn.btn-white(style="padding-left: 54px; padding-right: 54px") older posts
+                aside.col-12.col-xl-4.aside
+                    .input-search
+                        input(type="text" placeholder="Search blog")
+                    .aside__list
+                        .aside__list--caption
+                            svg(id="ilo_light_announcements" data-name="ilo/light/announcements" xmlns="http://www.w3.org/2000/svg" width="38.681" height="39.77" viewBox="0 0 38.681 39.77")
+                                g(id="Shape" transform="translate(0)" fill="none" stroke-miterlimit="10")
+                                    path(d="M34.563,22.889V15.205A15.143,15.143,0,0,0,25.03,1.143,19.764,19.764,0,0,0,19.209,0a17.124,17.124,0,0,0-5.558,1.143A14.91,14.91,0,0,0,4.118,15.215v7.674L.19,30.931a1.864,1.864,0,0,0,1.673,2.684h11.5V33.8a5.973,5.973,0,0,0,11.947,0v-.182H36.818a1.864,1.864,0,0,0,1.673-2.684Z" stroke="none")
+                                    path(d="M 19.33596992492676 37.77005767822266 C 21.52694892883301 37.77005767822266 23.30943870544434 35.98756790161133 23.30943870544434 33.79658508300781 L 23.30943870544434 31.61486625671387 L 36.59935760498047 31.61486625671387 L 32.56319808959961 23.35101699829102 L 32.56319808959961 15.2056770324707 C 32.56258010864258 12.56690692901611 31.77958869934082 10.01763725280762 30.29887962341309 7.833477020263672 C 28.82276916503906 5.656115531921387 26.7529468536377 3.988548755645752 24.31188201904297 3.00972843170166 C 23.52556610107422 2.720927238464355 21.14479446411133 1.999996900558472 19.20925903320312 1.999996900558472 C 16.90851974487305 1.999996900558472 14.42511940002441 2.987366914749146 14.40331935882568 2.996126890182495 L 14.37251949310303 3.008327007293701 C 11.90764999389648 3.961166858673096 9.821329116821289 5.621226787567139 8.339119911193848 7.809046745300293 C 6.85690975189209 9.996867179870605 6.088839530944824 12.55002689361572 6.117949485778809 15.19249725341797 L 6.118069648742676 15.21452713012695 L 6.118069648742676 23.35101699829102 L 2.081911563873291 31.61486625671387 L 15.36249923706055 31.61486625671387 L 15.36249923706055 33.79658508300781 C 15.36249923706055 35.98756790161133 17.14498901367188 37.77005767822266 19.33596992492676 37.77005767822266 M 19.33596992492676 39.77005767822266 C 16.03691864013672 39.77005767822266 13.36249923706055 37.09564590454102 13.36249923706055 33.79658508300781 L 13.36249923706055 33.6148681640625 L 1.862869620323181 33.6148681640625 C 1.219759583473206 33.61454772949219 0.6222395896911621 33.28268814086914 0.2820695638656616 32.73689651489258 C -0.05810042098164558 32.19111633300781 -0.09286042302846909 31.50851631164551 0.1901195794343948 30.93099784851074 L 4.118069648742676 22.88870620727539 L 4.118069648742676 15.21452713012695 C 4.049549579620361 8.994606971740723 7.849509716033936 3.385676860809326 13.65138912200928 1.142856955528259 C 13.65138912200928 1.142856955528259 16.46818923950195 -3.068237219849834e-06 19.20925903320312 -3.068237219849834e-06 C 21.95034027099609 -3.068237219849834e-06 25.02986907958984 1.142856955528259 25.02986907958984 1.142856955528259 C 30.78540992736816 3.43839693069458 34.56174850463867 9.008776664733887 34.56319808959961 15.20520687103271 L 34.56319808959961 22.88870620727539 L 38.49114990234375 30.93099784851074 C 38.77412033081055 31.50851631164551 38.73936080932617 32.19111633300781 38.39918899536133 32.73689651489258 C 38.05902099609375 33.28268814086914 37.46150970458984 33.61454772949219 36.81838989257812 33.6148681640625 L 25.30943870544434 33.6148681640625 L 25.30943870544434 33.79658508300781 C 25.30943870544434 37.09564590454102 22.63502883911133 39.77005767822266 19.33596992492676 39.77005767822266 Z" stroke="none" fill="#46b843")
+                                path(id="Line_Copy" data-name="Line Copy" d="M.571.25H29.143" transform="translate(4.286 32.788)" fill="none" stroke="#46b843" stroke-linecap="square" stroke-miterlimit="10" stroke-width="2")
+                            h3 Announcements
+                        ul.aside__list-nav
+                            li.aside__list-nav--item
+                                a Upcoming Changes (Live Chat, Less Censorship, More Access)
+                            li.aside__list-nav--item
+                                a New Servers (US Washington DC)
+                            li.aside__list-nav--item
+                                a New Servers (US Denver)
+                            li.aside__list-nav--item
+                                a Open Source: Releasing the PIA iOS Client
+                            li.aside__list-nav--item
+                                    a Opera Extension is now available
+                    .aside__list
+                        .aside__list--caption
+                            svg(id="ilo_light_announcements" data-name="ilo/light/announcements" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60")
+                                g(id="Group" transform="translate(9.5 10)")
+                                    g(id="Combined_Shape" data-name="Combined Shape" transform="translate(0.87)" fill="none" stroke-miterlimit="10")
+                                        path(d="M33.59,40a1.3,1.3,0,0,1-1.275-1.265A32.412,32.412,0,0,0,1.265,7.641,1.3,1.3,0,0,1,0,6.366V1.231A1.231,1.231,0,0,1,1.265,0a39.85,39.85,0,0,1,27,11.718A39.9,39.9,0,0,1,39.977,38.735,1.23,1.23,0,0,1,38.75,40ZM19.975,40a1.331,1.331,0,0,1-1.292-1.26,18.656,18.656,0,0,0-5.447-12.025A18.616,18.616,0,0,0,1.255,21.26,1.328,1.328,0,0,1,0,19.966V14.833a1.213,1.213,0,0,1,1.255-1.222,26.266,26.266,0,0,1,17.387,7.717A26.361,26.361,0,0,1,26.36,38.735,1.216,1.216,0,0,1,25.142,40Z" stroke="none")
+                                        path(d="M 37.94477462768555 38.00025177001953 C 37.45499420166016 28.61749458312988 33.53372573852539 19.81326293945312 26.84951019287109 13.13164234161377 C 20.17402839660645 6.448829174041748 11.37685871124268 2.526199102401733 1.999999761581421 2.033258199691772 L 1.999999761581421 5.674105167388916 C 19.28639793395996 6.678411483764648 33.28738021850586 20.69918632507324 34.28152847290039 38.00025177001953 L 37.94477462768555 38.00025177001953 M 24.30792808532715 38.00025177001953 C 23.83557319641113 32.24764251708984 21.34024429321289 26.8569393157959 17.22673988342285 22.74096298217773 C 13.11761474609375 18.62485694885254 7.738064289093018 16.13045692443848 1.999999761581421 15.66250228881836 L 1.999999761581421 19.31501960754395 C 6.775619983673096 19.77787399291992 11.24813270568848 21.8901481628418 14.65109634399414 25.30307006835938 C 18.0590877532959 28.70293617248535 20.16755294799805 33.19118499755859 20.62848663330078 38.00025177001953 L 24.30792808532715 38.00025177001953 M 38.7495002746582 40.00025177001953 L 33.58979797363281 40.00025177001953 C 32.89725112915039 40.00025177001953 32.34194946289062 39.42560195922852 32.31449890136719 38.73530197143555 C 31.66964912414551 21.89045333862305 18.08729934692383 8.293252944946289 1.264949679374695 7.64075231552124 C 0.5723997354507446 7.613302707672119 -2.716064386731887e-07 7.055752277374268 -2.716064386731887e-07 6.365902423858643 L -2.716064386731887e-07 1.230952501296997 C -2.716064386731887e-07 0.5406525731086731 0.5724014043807983 -0.02184752561151981 1.264949679374695 0.0006524993805214763 C 11.78730010986328 0.3332025110721588 21.29489898681641 4.740952491760254 28.26449966430664 11.71820259094238 C 35.2322998046875 18.68330192565918 39.64725112915039 28.2080020904541 39.97710037231445 38.73530197143555 C 39.99959945678711 39.42560195922852 39.43980026245117 40.00025177001953 38.7495002746582 40.00025177001953 Z M 25.14239883422852 40.00025177001953 L 19.97459983825684 40.00025177001953 C 19.28474998474121 40.00025177001953 18.72719955444336 39.42560195922852 18.68219947814941 38.74025344848633 C 18.37979888916016 34.19300079345703 16.47224998474121 29.94320297241211 13.23495006561279 26.71535301208496 C 10.00484943389893 23.47580337524414 5.772599697113037 21.56330299377441 1.255049705505371 21.26045227050781 C 0.5674497485160828 21.21320343017578 -2.716064386731887e-07 20.65565299987793 -2.716064386731887e-07 19.9658031463623 L -2.716064386731887e-07 14.83310222625732 C -2.716064386731887e-07 14.14055252075195 0.5674510598182678 13.58074188232422 1.255049705505371 13.61090278625488 C 8.032499313354492 13.92815208435059 14.14484977722168 16.82300186157227 18.64214897155762 21.32795333862305 C 23.15205001831055 25.84055328369141 26.03474998474121 31.95785331726074 26.35964965820312 38.73530197143555 C 26.39204978942871 39.42560195922852 25.83225059509277 40.00025177001953 25.14239883422852 40.00025177001953 Z" stroke="none" fill="#46b843")
+                                    circle(id="Oval_3" data-name="Oval 3" cx="5.217" cy="5.217" r="5.217" transform="translate(0 29.565)" fill="none" stroke="#46b843" stroke-miterlimit="10" stroke-width="2")
+                            h3 Popular posts
+                        ul.aside__list-nav
+                            li.aside__list-nav--item
+                                a The Gift of Privacy
+                            li.aside__list-nav--item
+                                a UK High Court Censors Many Links To Popcorn Time: Useless, Dangerous Gesture
+                            li.aside__list-nav--item
+                                a About the PIA Client Security and VPN Security in General
+                            li.aside__list-nav--item
+                                a A Private Net Is Just As Fundamental A Right As Freedom Of Speech
+                            li.aside__list-nav--item
+                                a Wiretapping Today Just Doesn’t Mean What The Word Meant In The 1990s, So Don’t Fall For That Lie
+                    .aside__img
+                        img(src="./images/bitmap.jpg")
+                    .aside__tags
+                        .aside__list--caption
+                            h3 Tag cloud
+                        img(src="./images/tag-cloud.jpg", style="margin-left: -12px")
+        include ./components/pricing
+        include ./components/footer

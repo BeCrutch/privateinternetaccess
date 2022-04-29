@@ -1,0 +1,152 @@
+mixin footerList(obj)
+    .list
+        h3=obj.caption
+        if obj.row
+            ul.list-row
+                each val in obj.list
+                    li
+                        a=val
+        else
+            ul
+                each val in obj.list
+                    li
+                        a=val
+
+footer
+    .container
+        .row
+            .col-12
+                .footer-top
+                    a(href="/" alt="logo")
+                        img(src="icons/logo.svg" title="logo")
+            .col-12
+                .footer__lists
+                    .footer__lists--x1
+                        +footerList({
+                            caption: 'Company',
+                            list: ['About Us', 'Our Team', 'Careers', 'Press', 'In the Media', 'VPN Reviews', 'Contact Us', 'Blog']
+                        })
+                    .footer__lists--x2
+                        +footerList({
+                            caption: 'Programs',
+                            list: ['Whitehat Security', 'Affiliates']
+                        })
+                        +footerList({
+                            caption: 'learn more',
+                            list: ['VPN Encryption', 'Android VPN App', 'iOS VPN App', 'PIA Sitemap']
+                        })
+                    .footer__lists--x3
+                        +footerList({
+                            caption: 'LEGAL',
+                            list: ['Terms Of Service', 'Privacy Policy', 'DMCA Policy', 'Export Control Policy']
+                        })
+                    .footer__lists--x4
+                        .list
+                            h3 ABOUT
+                            ul
+                                li
+                                    p Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.
+                                li.text-small
+                                    p Map data provided by Google.
+                                    p.
+                                        PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+                                        PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+
+                                    p © London Trust Media, Inc. All Rights Reserved.
+                    .footer__lists--x5
+                        .list
+                            h3 SOCIAL
+                            ul.list-row
+                                li
+                                    a(href="#")
+                                        svg(xmlns="http://www.w3.org/2000/svg" width="14" height="28" viewBox="0 0 14 28")
+                                            path(id="f" d="M9.083,28V15.229h4.129l.616-4.978H9.083V7.077c0-1.446.382-2.419,2.379-2.419H14V.192A32.324,32.324,0,0,0,10.3,0C6.643,0,4.141,2.316,4.141,6.578V10.25H0v4.978H4.141V28Z" fill="#323642")
+                                li
+                                    a(href="#")
+                                        svg(xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23")
+                                            path(id="Shape" d="M28,2.721a11.371,11.371,0,0,1-3.3.915A5.822,5.822,0,0,0,27.227.425a11.5,11.5,0,0,1-3.65,1.41A5.7,5.7,0,0,0,19.385,0,5.777,5.777,0,0,0,13.64,5.807a5.887,5.887,0,0,0,.149,1.324A16.248,16.248,0,0,1,1.951,1.062,5.859,5.859,0,0,0,3.729,8.815a5.7,5.7,0,0,1-2.6-.729v.073a5.8,5.8,0,0,0,4.607,5.7,5.757,5.757,0,0,1-1.513.2,5.454,5.454,0,0,1-1.081-.108A5.756,5.756,0,0,0,8.5,17.984,11.443,11.443,0,0,1,1.37,20.466,12.073,12.073,0,0,1,0,20.387,16.105,16.105,0,0,0,8.8,23c10.566,0,16.342-8.85,16.342-16.526l-.019-.752A11.542,11.542,0,0,0,28,2.721Z" fill="#323642")
+                                li
+                                    a(href="#")
+                                        svg(xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22")
+                                            path(id="Shape" d="M3.137,18.813A10.631,10.631,0,0,1,0,11,10.633,10.633,0,0,1,3.137,3.187,10.3,10.3,0,0,1,10.827,0a10.074,10.074,0,0,1,7.286,2.878L15.179,5.757a5.9,5.9,0,0,0-4.351-1.645A6.537,6.537,0,0,0,6.071,6.169,7.158,7.158,0,0,0,4.047,11.1a6.8,6.8,0,0,0,2.024,4.935,6.537,6.537,0,0,0,4.756,2.057,6.982,6.982,0,0,0,4.048-1.234A5.14,5.14,0,0,0,17,13.364H10.827v-3.8h10.22a11.443,11.443,0,0,1,.2,1.85c0,3.187-.911,5.757-2.934,7.608A9.979,9.979,0,0,1,10.827,22,10.3,10.3,0,0,1,3.137,18.813Zm24.691-2.878V12.748H24.691V9.561h3.136V6.374h3.137V9.561H34v3.187H30.965v3.187Z" fill="#323642")
+                                li
+                                    a(href="#")
+                                        svg(id="Group" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28")
+                                            path(id="LinkedIn__x28_alt_x29_-path" d="M26.271,0H2.247A2.1,2.1,0,0,0,0,1.9V26.046A2.149,2.149,0,0,0,2.247,28H26.271A1.717,1.717,0,0,0,28,26.046V1.9A1.671,1.671,0,0,0,26.271,0Z" fill="#323642")
+                                            path(id="LinkedIn__x28_alt_x29_" d="M11.075,18.961H6.867c0-.1.056-11.457,0-12.728h4.207V7.965A4.459,4.459,0,0,1,15,5.861a4.742,4.742,0,0,1,3.545,1.4,6.152,6.152,0,0,1,1.443,4.331v7.369H15.529V12.079c0-1.91-.713-2.879-2.118-2.879a2.37,2.37,0,0,0-2.189,1.548,2.754,2.754,0,0,0-.148,1.031V18.96Zm-7,0H.257V6.233H4.074V18.959ZM2.382,4.324H2.354A2.161,2.161,0,0,1,0,2.174,2.2,2.2,0,0,1,2.409,0,2.188,2.188,0,0,1,4.791,2.161,2.2,2.2,0,0,1,2.382,4.324Z" transform="translate(4.198 4.586)" fill="#fff")
+                                li
+                                    a(href="#")
+                                        svg(xmlns="http://www.w3.org/2000/svg" width="29.995" height="29.993" viewBox="0 0 29.995 29.993")
+                                            g(id="_2SL" data-name="2SL" transform="translate(-0.003 -0.007)")
+                                                path(id="Shape" d="M14.654,0A15,15,0,1,1,0,14.993,15,15,0,0,1,14.654,0Z" transform="translate(0.003 0.007)" fill="#323642")
+                                                path(id="Shape-2" data-name="Shape" d="M10.011,20.055a12.151,12.151,0,0,1-5.065-1.7,7.7,7.7,0,0,1-3.121-3.441,5.733,5.733,0,0,1-.385-3.282.224.224,0,0,0-.115-.263A2.717,2.717,0,0,1,.036,9.5a2.54,2.54,0,0,1,3.1-2.948,8.171,8.171,0,0,1,1.3.566.246.246,0,0,0,.29,0,11.417,11.417,0,0,1,4.12-1.732A11.669,11.669,0,0,1,11.36,5.1c.167,0,.2-.089.239-.214q.676-2.157,1.358-4.312a.668.668,0,0,1,.926-.541c1.256.268,2.511.532,3.765.806A.3.3,0,0,0,18,.726,2,2,0,0,1,21.244,1a1.965,1.965,0,0,1-1.452,2.883,2.015,2.015,0,0,1-2.251-1.464.385.385,0,0,0-.354-.32c-.968-.2-1.932-.411-2.9-.619-.076-.016-.155-.025-.252-.041-.4,1.258-.8,2.5-1.215,3.784l.666.069A11.453,11.453,0,0,1,18.725,7.12a.181.181,0,0,0,.258-.018A2.554,2.554,0,0,1,21.8,6.718a2.489,2.489,0,0,1,1.529,2.171,2.559,2.559,0,0,1-1.181,2.382.453.453,0,0,0-.216.506,5.9,5.9,0,0,1-1.5,4.844A10.325,10.325,0,0,1,14.7,19.829a13.539,13.539,0,0,1-2.981.333A13.722,13.722,0,0,1,10.011,20.055Z" transform="translate(3.424 5.564)" fill="#fff")
+                                li
+                                    a(href="#")
+                                        svg(id="sociai_icons_youtube" data-name="sociai icons youtube" xmlns="http://www.w3.org/2000/svg" width="41.429" height="29" viewBox="0 0 41.429 29")
+                                            path(id="YouTube__x28_alt_x29_" d="M41.429,6.195A6.193,6.193,0,0,0,35.237,0H6.191A6.193,6.193,0,0,0,0,6.195v16.61A6.193,6.193,0,0,0,6.191,29H35.237a6.193,6.193,0,0,0,6.191-6.195V6.195Z" fill="#323642")
+                                            path(id="YouTube__x28_alt_x29_-path" d="M0,15.6V0L11.831,7.8Z" transform="translate(16.571 7)" fill="#fff")
+
+            //.col-6.col-xl-2
+            //    +footerList({
+            //        caption: 'Company',
+            //        list: ['About Us', 'Our Team', 'Careers', 'Press', 'In the Media', 'VPN Reviews', 'Contact Us', 'Blog']
+            //    })
+            //
+            //.col-6.col-xl-2
+            //    +footerList({
+            //        caption: 'Programs',
+            //        list: ['Whitehat Security', 'Affiliates']
+            //    })
+            //    +footerList({
+            //        caption: 'learn more',
+            //        list: ['VPN Encryption', 'Android VPN App', 'iOS VPN App', 'PIA Sitemap']
+            //    })
+            //.col-6.col-xl-2
+            //    +footerList({
+            //        caption: 'LEGAL',
+            //        list: ['Terms Of Service', 'Privacy Policy', 'DMCA Policy', 'Export Control Policy']
+            //    })
+            //.col-6.col-xl-6
+            //    .list
+            //        h3 ABOUT
+            //        ul
+            //            li
+            //                p Private Internet Access is the leading VPN Service provider specializing in secure, encrypted VPN tunnels which create several layers of privacy and security providing you safety on the internet. Our service is backed by multiple gateways worldwide with access in 28+ countries, 44+ regions.
+            //            li.text-small
+            //                p Map data provided by Google.
+            //                p.
+            //                    PC Mag Editor’s Choice award image reprinted with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+            //                    PC Mag quote reprinted from www.pcmag.com with permission. © 2012 Ziff Davis, Inc. All Rights Reserved.
+            //
+            //                p © London Trust Media, Inc. All Rights Reserved.
+            //    .list
+            //        h3 SOCIAL
+            //        ul.list-row
+            //            li
+            //                a(href="#")
+            //                    svg(xmlns="http://www.w3.org/2000/svg" width="14" height="28" viewBox="0 0 14 28")
+            //                        path(id="f" d="M9.083,28V15.229h4.129l.616-4.978H9.083V7.077c0-1.446.382-2.419,2.379-2.419H14V.192A32.324,32.324,0,0,0,10.3,0C6.643,0,4.141,2.316,4.141,6.578V10.25H0v4.978H4.141V28Z" fill="#323642")
+            //            li
+            //                a(href="#")
+            //                    svg(xmlns="http://www.w3.org/2000/svg" width="28" height="23" viewBox="0 0 28 23")
+            //                        path(id="Shape" d="M28,2.721a11.371,11.371,0,0,1-3.3.915A5.822,5.822,0,0,0,27.227.425a11.5,11.5,0,0,1-3.65,1.41A5.7,5.7,0,0,0,19.385,0,5.777,5.777,0,0,0,13.64,5.807a5.887,5.887,0,0,0,.149,1.324A16.248,16.248,0,0,1,1.951,1.062,5.859,5.859,0,0,0,3.729,8.815a5.7,5.7,0,0,1-2.6-.729v.073a5.8,5.8,0,0,0,4.607,5.7,5.757,5.757,0,0,1-1.513.2,5.454,5.454,0,0,1-1.081-.108A5.756,5.756,0,0,0,8.5,17.984,11.443,11.443,0,0,1,1.37,20.466,12.073,12.073,0,0,1,0,20.387,16.105,16.105,0,0,0,8.8,23c10.566,0,16.342-8.85,16.342-16.526l-.019-.752A11.542,11.542,0,0,0,28,2.721Z" fill="#323642")
+            //            li
+            //                a(href="#")
+            //                    svg(xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22")
+            //                        path(id="Shape" d="M3.137,18.813A10.631,10.631,0,0,1,0,11,10.633,10.633,0,0,1,3.137,3.187,10.3,10.3,0,0,1,10.827,0a10.074,10.074,0,0,1,7.286,2.878L15.179,5.757a5.9,5.9,0,0,0-4.351-1.645A6.537,6.537,0,0,0,6.071,6.169,7.158,7.158,0,0,0,4.047,11.1a6.8,6.8,0,0,0,2.024,4.935,6.537,6.537,0,0,0,4.756,2.057,6.982,6.982,0,0,0,4.048-1.234A5.14,5.14,0,0,0,17,13.364H10.827v-3.8h10.22a11.443,11.443,0,0,1,.2,1.85c0,3.187-.911,5.757-2.934,7.608A9.979,9.979,0,0,1,10.827,22,10.3,10.3,0,0,1,3.137,18.813Zm24.691-2.878V12.748H24.691V9.561h3.136V6.374h3.137V9.561H34v3.187H30.965v3.187Z" fill="#323642")
+            //            li
+            //                a(href="#")
+            //                    svg(id="Group" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28")
+            //                        path(id="LinkedIn__x28_alt_x29_-path" d="M26.271,0H2.247A2.1,2.1,0,0,0,0,1.9V26.046A2.149,2.149,0,0,0,2.247,28H26.271A1.717,1.717,0,0,0,28,26.046V1.9A1.671,1.671,0,0,0,26.271,0Z" fill="#323642")
+            //                        path(id="LinkedIn__x28_alt_x29_" d="M11.075,18.961H6.867c0-.1.056-11.457,0-12.728h4.207V7.965A4.459,4.459,0,0,1,15,5.861a4.742,4.742,0,0,1,3.545,1.4,6.152,6.152,0,0,1,1.443,4.331v7.369H15.529V12.079c0-1.91-.713-2.879-2.118-2.879a2.37,2.37,0,0,0-2.189,1.548,2.754,2.754,0,0,0-.148,1.031V18.96Zm-7,0H.257V6.233H4.074V18.959ZM2.382,4.324H2.354A2.161,2.161,0,0,1,0,2.174,2.2,2.2,0,0,1,2.409,0,2.188,2.188,0,0,1,4.791,2.161,2.2,2.2,0,0,1,2.382,4.324Z" transform="translate(4.198 4.586)" fill="#fff")
+            //            li
+            //                a(href="#")
+            //                    svg(xmlns="http://www.w3.org/2000/svg" width="29.995" height="29.993" viewBox="0 0 29.995 29.993")
+            //                        g(id="_2SL" data-name="2SL" transform="translate(-0.003 -0.007)")
+            //                            path(id="Shape" d="M14.654,0A15,15,0,1,1,0,14.993,15,15,0,0,1,14.654,0Z" transform="translate(0.003 0.007)" fill="#323642")
+            //                            path(id="Shape-2" data-name="Shape" d="M10.011,20.055a12.151,12.151,0,0,1-5.065-1.7,7.7,7.7,0,0,1-3.121-3.441,5.733,5.733,0,0,1-.385-3.282.224.224,0,0,0-.115-.263A2.717,2.717,0,0,1,.036,9.5a2.54,2.54,0,0,1,3.1-2.948,8.171,8.171,0,0,1,1.3.566.246.246,0,0,0,.29,0,11.417,11.417,0,0,1,4.12-1.732A11.669,11.669,0,0,1,11.36,5.1c.167,0,.2-.089.239-.214q.676-2.157,1.358-4.312a.668.668,0,0,1,.926-.541c1.256.268,2.511.532,3.765.806A.3.3,0,0,0,18,.726,2,2,0,0,1,21.244,1a1.965,1.965,0,0,1-1.452,2.883,2.015,2.015,0,0,1-2.251-1.464.385.385,0,0,0-.354-.32c-.968-.2-1.932-.411-2.9-.619-.076-.016-.155-.025-.252-.041-.4,1.258-.8,2.5-1.215,3.784l.666.069A11.453,11.453,0,0,1,18.725,7.12a.181.181,0,0,0,.258-.018A2.554,2.554,0,0,1,21.8,6.718a2.489,2.489,0,0,1,1.529,2.171,2.559,2.559,0,0,1-1.181,2.382.453.453,0,0,0-.216.506,5.9,5.9,0,0,1-1.5,4.844A10.325,10.325,0,0,1,14.7,19.829a13.539,13.539,0,0,1-2.981.333A13.722,13.722,0,0,1,10.011,20.055Z" transform="translate(3.424 5.564)" fill="#fff")
+            //            li
+            //                a(href="#")
+            //                    svg(id="sociai_icons_youtube" data-name="sociai icons youtube" xmlns="http://www.w3.org/2000/svg" width="41.429" height="29" viewBox="0 0 41.429 29")
+            //                        path(id="YouTube__x28_alt_x29_" d="M41.429,6.195A6.193,6.193,0,0,0,35.237,0H6.191A6.193,6.193,0,0,0,0,6.195v16.61A6.193,6.193,0,0,0,6.191,29H35.237a6.193,6.193,0,0,0,6.191-6.195V6.195Z" fill="#323642")
+            //                        path(id="YouTube__x28_alt_x29_-path" d="M0,15.6V0L11.831,7.8Z" transform="translate(16.571 7)" fill="#fff")

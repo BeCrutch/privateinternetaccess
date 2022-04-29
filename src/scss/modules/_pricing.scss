@@ -1,0 +1,156 @@
+.pricing {
+  background-color: #3D4251;
+  padding-bottom: 50px;
+  
+  h1 {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #FFF;
+  }
+  
+  &-cards {
+    align-items: center;
+    padding-top: 40px;
+  }
+  
+  &-card {
+    background-color: #FFF;
+    padding: 52px 16px 40px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 4px solid transparent;
+  
+    &__period {
+      text-align: center;
+      position: relative;
+      letter-spacing: .8px;
+      font-size: 14px;
+      font-weight: 500;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      
+      &:after {
+        content: "";
+        position: absolute;
+        left: calc(50% - 12px);
+        bottom: 0;
+        height: 2px;
+        width: 24px;
+        background-color: #4CB649;
+      }
+    }
+    
+    &__price {
+      display: flex;
+      justify-content: center;
+      padding: 22px 0 11px;
+      text-align: center;
+      font-weight: 300;
+      
+      &--currency {
+        align-self: flex-start;
+        margin-top: 6px;
+        font-size: 24px;
+      }
+      
+      &--item {
+        font-size: 56px;
+        margin-left: 7px;
+      }
+      
+      &-desc {
+        align-self: flex-end;
+        margin-bottom: 6px;
+        margin-left: 7px;
+        font-size: 24px;
+      }
+    }
+    
+    &__desc {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 28px;
+      
+      .profit-percent {
+        font-weight: 700;
+      }
+      
+      &--profit {
+        margin-bottom: 9px;
+        
+        .old-price {
+          color: #F24458;
+          text-decoration: line-through;
+        }
+  
+        .profit-price {
+          margin-left: 12px;
+        }
+      }
+    }
+    
+    &__action {
+      text-align: center;
+      padding-top: 32px;
+    }
+  }
+  
+  &-advantage {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 4px;
+    border-color: #4CB649;
+  }
+  
+  &-logo-pay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+    
+    h4 {
+      font-size: 18px;
+      font-weight: 300;
+      color: #FFF;
+    }
+    
+    .logo-pay__liat {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      
+      li {
+        margin-left: 30px;
+      }
+    }
+  }
+  
+  &-link {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 8px;
+    
+      a {
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #4CB649;
+        font-weight: 500;
+        letter-spacing: .8px;
+        line-height: 24px;
+        
+        &:not(:first-of-type) {
+          margin-left: 40px;
+        }
+      }
+  }
+}
